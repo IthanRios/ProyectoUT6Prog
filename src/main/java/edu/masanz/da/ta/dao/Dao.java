@@ -33,11 +33,14 @@ public class Dao {
     }
 
     private static void iniMapaUsuarios() {
-        // TODO 01 iniMapaUsuarios
+        for(int i = 0; i < USUARIOS.length; i++ ){
+            Usuario usuario = new Usuario(USUARIOS[i].split(",")[0],USUARIOS[i].split(",")[1],USUARIOS[i].split(",")[2],USUARIOS[i].split(",")[3]);
+            mapaUsuarios.put(USUARIOS[i].split(",")[0],usuario);
+        }
     }
 
     private static void iniMapaItems() {
-        // TODO 02 iniMapaItems
+        // TODO 03 iniMapItems
     }
 
     private static void iniMapaPujas() {
