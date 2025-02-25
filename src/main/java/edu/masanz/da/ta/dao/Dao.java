@@ -40,7 +40,10 @@ public class Dao {
     }
 
     private static void iniMapaItems() {
-        // TODO 03 iniMapItems
+        for(int i = 0; i < ITEMS.length; i++){
+            Item item = new Item((Long.parseLong(ITEMS[i].split(",")[0])),ITEMS[i].split(",")[1],ITEMS[i].split(",")[2],Integer.parseInt(ITEMS[i].split(",")[3]),ITEMS[i].split(",")[4],ITEMS[i].split(",")[5],Integer.parseInt(ITEMS[i].split(",")[6]),Boolean.parseBoolean(ITEMS[i].split(",")[7]));
+            mapaItems.put(Long.valueOf(ITEMS[i].split(",")[0]),item);
+        }
     }
 
     private static void iniMapaPujas() {
